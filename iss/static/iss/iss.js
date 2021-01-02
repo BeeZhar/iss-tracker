@@ -5,11 +5,12 @@ const iss_api = 'https://api.wheretheiss.at/v1/satellites/25544/';
 ////////////////////////////////////////////////////////////////////////
 ////   MAPBOX   ////
 ///////////////////////////////////////////////////////////////////////
-mapboxgl.accessToken = 'pk.eyJ1IjoiYmVlemhhciIsImEiOiJja2hseGw4cDMwNTYwMnJsOXFlaTkzZWJtIn0.kRrWzwBBtd9CTZEiBhf4Dw';
+mapboxgl.accessToken = 'YOUR_MAPBOX_TOKEN';
 
 
-// implementation of CustomLayerInterface to draw a pulsing dot icon on the map
-// see https://docs.mapbox.com/mapbox-gl-js/api/#customlayerinterface for more info
+// Implementation of CustomLayerInterface to draw a pulsing dot icon on the map
+// See https://docs.mapbox.com/mapbox-gl-js/api/#customlayerinterface for more info
+
 var size = 120
 
 var pulsingDot = {
