@@ -1,0 +1,36 @@
+{% extends "iss/base.html" %}
+<!-- Map container & data cells -->
+<head>
+    <title>HOME</title>
+</head>
+{% block content %}
+    <div class="mainContainer">
+        <div class="mapContainer">
+            <div id="map" class="mapContained"></div>
+        </div>
+        <div id="issData">
+            <div class="dataCells">
+                <h2>speed</h2>
+                <h3><span id="velocity"></span> KM/H</h3>
+            </div>
+            <div class="dataCells">
+                <h2>altitude</h2>
+                <h3><span id="altitude"></span> KM</h3>
+            </div>
+            <div class="dataCells">
+                <h2>lng</h2>
+                <h3><span id="longitude"></span> °</h3>
+            </div>
+            <div class="dataCells">
+                <h2>lat</h2>
+                <h3><span id="latitude"></span> °</h3>
+            </div>
+            <div class="dataCells">
+                <h2>visibility</h2>
+                <h3><span id="visibility"></span></h3>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+

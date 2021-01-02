@@ -1,0 +1,133 @@
+body {
+    background-color: #2b2730;
+    background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23654f6d' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+    overflow: hidden;
+}
+
+#mainNavbar .navbar-brand{
+    font-family: 'Goldman', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    background: -webkit-linear-gradient(135deg,#AD30FF, rgb(223, 46, 143));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#navLinks .nav-link {
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    color:  #e8d9f3;
+    transition: color 100ms ease-in-out;
+}
+
+#mainNavbar .nav-link:hover, nav-link:focus {
+    color: #AD30FF;
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.mapContainer {
+    width: 80%;
+    height: 70%;
+    margin: auto;
+    margin-bottom: 1px;
+}
+
+.mapContained {
+    position: relative;
+    width: 100%;
+    height: 100%;      
+}
+
+#issData {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    margin-top: 0;
+    height: 8%;
+    width: 80%;
+}
+
+.dataText {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+}
+
+.dataCells {
+    height: 100%;
+    width: 20%;
+    border: 0.6px solid #803cad;
+    max-height: 74px;
+    min-height: 60px;
+}
+
+.dataCells h2 {
+    font-family: 'Goldman', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    background: -webkit-linear-gradient(135deg,#AD30FF, rgb(223, 46, 143));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin-top: 5px;
+    margin-left: 3px;
+}
+
+.dataCells h3 {
+    font-family: 'Goldman', sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+}
+
+
+@media (max-width: 900px) { 
+    .mapContainer {
+        width: 100%;
+        height: 100%;
+    }
+    #issData {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .mapContainer {
+        width: 60%;
+        height: 60%;
+        border: 1px solid #803cad;
+    }
+    .mapContained {
+        box-sizing: border-box;
+    }
+    #issData {
+        width: 60%;
+    }
+}
+
+@media (max-width: 560px) {
+    .dataCells h2{
+        font-size: 0.7rem;
+    }
+    .dataCells h3 {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 374px) {
+    .dataCells h2{
+        font-size: 0.6rem;
+    }
+    .dataCells h3 {
+        font-size: 0.6rem;
+    }
+}
