@@ -2,7 +2,90 @@ body {
     background-color: #2b2730;
     background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23654f6d' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
     overflow: hidden;
+    height: 100%;
 }
+
+html {
+    height: 100%;
+}
+
+/* /////////// LOADER //////////////*/
+
+.loader-wrap {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #2b2730;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: 4px solid #e8d9f3;
+    animation: loader 2s infinite ease;
+  }
+  
+  .loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: #AD30FF;
+    animation: loader-inner 2s infinite ease-in;
+  }
+  
+  @keyframes loader {
+    0% {
+      transform: rotate(0deg);
+    }
+    
+    25% {
+      transform: rotate(180deg);
+    }
+    
+    50% {
+      transform: rotate(180deg);
+    }
+    
+    75% {
+      transform: rotate(360deg);
+    }
+    
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes loader-inner {
+    0% {
+      height: 0%;
+    }
+    
+    25% {
+      height: 0%;
+    }
+    
+    50% {
+      height: 100%;
+    }
+    
+    75% {
+      height: 100%;
+    }
+    
+    100% {
+      height: 0%;
+    }
+  }
+
+/* /////////// END OF LOADER //////////////*/
 
 #mainNavbar .navbar-brand{
     font-family: 'Goldman', sans-serif;
@@ -29,14 +112,14 @@ body {
 .mainContainer {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
 }
 
 .mapContainer {
     width: 80%;
     height: 70%;
     margin: auto;
-    margin-bottom: 1px;
+    margin-bottom: 10px;
 }
 
 .mapContained {
@@ -50,27 +133,21 @@ body {
     flex-direction: row;
     margin: auto;
     margin-top: 0;
-    height: 8%;
+    height: 10%;
     width: 80%;
-}
-
-.dataText {
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.2rem;
 }
 
 .dataCells {
     height: 100%;
     width: 20%;
-    border: 0.6px solid #803cad;
+    border: 1px solid #803cad;
     max-height: 74px;
     min-height: 60px;
 }
 
 .dataCells h2 {
     font-family: 'Goldman', sans-serif;
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-transform: uppercase;
     font-weight: 600;
     background: -webkit-linear-gradient(135deg,#AD30FF, rgb(223, 46, 143));
@@ -82,8 +159,10 @@ body {
 }
 
 .dataCells h3 {
-    font-family: 'Goldman', sans-serif;
-    font-size: 0.9rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
     text-transform: uppercase;
     color: white;
     text-align: center;
@@ -94,9 +173,13 @@ body {
     .mapContainer {
         width: 100%;
         height: 100%;
+        margin-bottom: 0;
     }
     #issData {
         width: 100%;
+    }
+    .dataCells{
+        border: 1.5px solid #803cad;
     }
 }
 

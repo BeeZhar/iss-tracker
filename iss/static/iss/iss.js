@@ -5,7 +5,9 @@ const iss_api = 'https://api.wheretheiss.at/v1/satellites/25544/';
 ////////////////////////////////////////////////////////////////////////
 ////   MAPBOX   ////
 ///////////////////////////////////////////////////////////////////////
-mapboxgl.accessToken = 'YOUR_MAPBOX_TOKEN';
+
+// Don't bother using this token. It is restricted to this URL only.
+mapboxgl.accessToken = 'pk.eyJ1IjoiYmVlemhhciIsImEiOiJja2hseGw4cDMwNTYwMnJsOXFlaTkzZWJtIn0.kRrWzwBBtd9CTZEiBhf4Dw';
 
 
 // Implementation of CustomLayerInterface to draw a pulsing dot icon on the map
@@ -172,19 +174,15 @@ map.on('load', function () {
             };  
         };
     });
-//End of onload map function  
+//End of onload map function
 });
 
 
+// Loading script
+function fadeLoader() {
+    $(".loader-wrap").fadeOut("slow")
+};
 
-
-
-
-
-
-    
-
-
-
-
-
+$(window).on("load",function(){
+    setTimeout(fadeLoader, 3200);
+});
